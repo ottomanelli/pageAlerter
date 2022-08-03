@@ -1,0 +1,34 @@
+{
+  "name": "Page Alerter",
+  "description": "A chrome extension that will constantly refresh the page and will alert you when what you are monitoring has changed.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./src/analyze.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "./src/popup/popup.html",
+    "default_icon": {
+      "16": "/static/images/pageAlerter16.png",
+      "32": "/static/images/pageAlerter32.png",
+      "48": "/static/images/pageAlerter48.png",
+      "128": "/static/images/pageAlerter128.png"
+      }
+  },
+  "icons": {
+    "16": "/static/images/pageAlerter16.png",
+    "32": "/static/images/pageAlerter32.png",
+    "48": "/static/images/pageAlerter48.png",
+    "128": "/static/images/pageAlerter128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "static/sounds/something-happened.mp3" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}

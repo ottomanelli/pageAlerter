@@ -1,0 +1,70 @@
+body {
+  border: 4px solid #002D72;
+  margin: 0;
+  padding: 8px;
+  background-color: #FAFAFA;
+}
+
+.pageAlerter-container {
+  padding: 12px;
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+.pageAlerter-container * {
+  box-sizing: border-box;
+}
+
+.pageAlerter-container > div {
+  border-bottom: 3px solid #002D72;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.pageAlerter-container h3 {
+  text-align: center;
+  margin-top: 0;
+  color: #002D72;
+}
+
+.styleLabel {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.input-option {
+  margin-bottom: 12px;
+}
+
+
+
+.input-option input,
+.input-option textarea {
+  padding: 6px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.save-button {
+  width: 100%;
+  color: #FF5910;
+  background-color: #002D72;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+  padding: 3px;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.radio-container {
+  display: flex;
+  margin-bottom: 12px
+}
+
+.radio-container span {
+  flex: 1;
+}

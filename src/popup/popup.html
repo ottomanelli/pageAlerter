@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./popup.css">
+  </head>
+  <body>
+    <div class='pageAlerter-container'>
+      <h3>Page Alerter Options</h1>
+      <!-- URL to target -->
+      <div class='input-option'>
+        <label class="styleLabel" for="website">Website</label>
+        <input name='website' id='website' placeholder='ie) www.bestbuy.com' />
+      </div>
+
+       <!-- Info for what we should to target -->
+      <div class='selector-container'>
+
+        <div class='selector-radio'>
+          <label class="styleLabel" >Simple or Custom selectors?</label>
+          <div class='radio-container'>
+            <span>
+              <label for="simple">Simple</label>
+              <input type="radio" id="simple" name="select_type" value="simple">
+            </span>
+            <span>
+              <label for="custom">Custom</label>
+              <input type="radio" id="custom" name="select_type" value="custom">
+            </span>
+          </div>
+        </div>
+
+        <div class='simple-selector'>
+          <div class='input-option'>
+            <label class="styleLabel" for="query">Query Selector</label>
+            <input name='query' id='query' placeholder='ex) [data-button-state="SOLD_OUT"]' />
+          </div>
+
+          <label class="styleLabel">Should the element exist?</label>
+          <div class='radio-container'>
+            <span>
+              <label for="true">YES</label>
+              <input type="radio" id="query_true" name="query_exists" value="true">
+            </span>
+            <span>
+              <label for="false">NO</label>
+              <input type="radio" id="query_false" name="query_exists" value="false">
+            </span>
+          </div>
+        </div>
+
+        <div class='custom-selector'>
+          <div class='input-option'>
+            <label class="styleLabel" for="custom_value">Custom Expression</label>
+            <textarea name='custom_value' id='custom_value' placeholder="[...document.querySelectorAll('.a-alert-heading')]
+            .filter(alert => alert.innerText.toLowerCase().includes('no delivery windows available')).length > 0"></textarea>
+          </div>
+        </div>
+
+      </div>
+
+       <!-- Refresh rate -->
+      <div class='input-option'>
+        <label class="styleLabel" for="refresh">Refresh Rate (seconds)</label>
+        <input type='number' name='refresh' id='refresh' placeholder='refresh rate' />
+      </div>
+
+       <!-- How long we should wait until looking for what we're targeting -->
+      <div class='input-option'>
+        <label class="styleLabel" for="delay">Delay Rate (seconds)</label>
+        <input type='number' name='delay' id='delay' placeholder='delay rate' />
+      </div>
+
+
+       <!-- Use sound to alert user -->
+       <div>
+        <label class="styleLabel"> Use sound?</label>
+        <div class='radio-container'>
+        
+          <span>
+            <label for="sound_true">YES</label>
+            <input type="radio" id="sound_true" name="use_sound" value="true">
+          </span>
+          <span>
+            <label for="sound_false">NO</label>
+            <input type="radio" id="sound_false" name="use_sound" value="false">
+          </span>
+        </div>
+       </div>
+      
+
+      <!-- Send text to alert user -->
+      <div>
+        <label class="styleLabel">Send Text?</label>
+        <div class='radio-container'>
+          
+          <span>
+            <label for="text_true">YES</label>
+            <input type="radio" id="sms_true" name="send_sms" value="true">
+          </span>
+          <span>
+            <label for="text_false">NO</label>
+            <input type="radio" id="sms_false" name="send_sms" value="false">
+          </span>
+        </div>
+      </div>
+      
+
+      <div class='input-option send_sms_url'>
+        <label for="send_sms_url">URL for Text Server</label>
+        <input type='text' name='send_sms_url' id='send_sms_url' placeholder='text url server' />
+      </div>
+      
+
+
+       <!-- Turn the URL on / off -->
+      <div class='radio-container'>
+        <span>
+          <label for="on">ON</label>
+          <input type="radio" id="on" name="turn_on_off" value="on">
+        </span>
+        <span>
+          <label for="off">OFF</label>
+          <input type="radio" id="off" name="turn_on_off" value="off">
+        </span>
+      </div>
+
+      <button class='save-button' id='save-button'>Save</button>
+    </div>
+    <script src="./popup.js"></script>
+  </body>
+</html>
